@@ -82,7 +82,3 @@ To use **GoSubParse** in your project, follow these steps:
 ## 📝 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-Feel free to adjust the paths and specific details according to your project's actual structure and repository information!
