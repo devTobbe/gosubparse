@@ -5,5 +5,5 @@ type Caption struct {
 	StartTime string
 	EndTime   string
 	Text      string
-	index     uint16
+	Index     uint16
 }
