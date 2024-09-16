@@ -22,13 +22,13 @@ go get github.com/your-username/subparse-go
 To use **GoSubParse** in your project, follow these steps:
 
 1. **Import the Library:**
-   [comment]: TODO: Proper import once the package is finalized
+   <!--  TODO: Proper import once the package is finalized -->
 
    ```go
    import "github.com/your-username/subparse-go/pkg/parser"
    ```
 
-   [comment]: TODO: Change usage instructions once finished.
+   <!-- TODO: Change usage instructions once finished. -->
 
 2. **Call `ParseSubtitleFile`:**
 
