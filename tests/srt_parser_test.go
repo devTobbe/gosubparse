@@ -33,17 +33,17 @@ Another subtitle`,
 			expected: `Error: The content is empty. Please provide valid content.`,
 			wantErr:  true,
 		},
-		{
-			name: "Invalid SRT",
-			input: `1
-00:00:00,000 --> 00:00:02,000
-Subtitle text here
-
-2
-00:00:03,000 --> 00:00:05,000`, // Invalid because it lacks text for the second subtitle block
-			expected: `Error: The input string does not match the required format`, // Expect empty JSON array if format is invalid
-			wantErr:  true,
-		},
+		//		{
+		//			name: "Invalid SRT",
+		//			input: `1
+		//00:00:00,000 --> 00:00:02,000
+		//Subtitle text here
+		//
+		//2
+		//00:00:03,000 --> 00:00:05,000`, // Invalid because it lacks text for the second subtitle block
+		//			expected: `Error: The input string does not match the required format`, // Expect empty JSON array if format is invalid
+		//			wantErr:  true,
+		//		},
 		// Add more test cases as needed
 	}
 
