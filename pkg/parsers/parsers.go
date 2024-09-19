@@ -12,15 +12,19 @@ import (
 // TODO: DOCS: Comment up
 // Define regex patterns as global variables
 // ParseWithRegex parses the input content using the provided regex pattern
-func ParseRegex(content string, re *regexp.Regexp) ([]byte, error) {
+func ParseRegex(content string, regex *regexp.Regexp) ([]byte, error) {
 	var subtitles []models.Caption
-	matches := re.FindAllStringSubmatch(content, -1)
+	matches := regex.FindAllStringSubmatch(content, -1)
+
+	if len(matches) < 1 {
+		return nil, errors.New("Error: Regex coulnd't find any matches")
+	}
 
 	for i, match := range matches {
 		index := uint16(i + 1)
-		endTime := match[3]
-		startTime := match[2]
-		text := strings.TrimSpace(match[4])
+		endTime := match[2]
+		startTime := match[1]
+		text := strings.TrimSpace(match[3])
 
 		subtitles = append(subtitles, models.Caption{
 			StartTime: startTime,
