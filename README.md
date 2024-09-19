@@ -1,4 +1,4 @@
-# 🎬 GoSubParse
+# 🎬 GoSubParse (⚠️ WIP ⚠️)
 
 A Go library for parsing subtitle files in `.srt`, `.ass`, `.ssa`, `.vtt` formats into a JSON format. This project is a Go rewrite of the TypeScript library [**SubParse**](https://github.com/devTobbe/subparse), offering a simple and efficient way to work with subtitle data programmatically.
 
