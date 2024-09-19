@@ -2,7 +2,6 @@ package parsers
 
 import (
 	"html"
-	"strings"
 
 	"main.go/internal/util"
 )
@@ -15,14 +14,7 @@ func ParseVTT(content string) ([]byte, error) {
 		return nil, err
 	}
 
-	lines := strings.Split(content, "\n")
-
-	// If there are less than 3 lines, return an empty string
-	if len(lines) <= 2 {
-		return ParseSRT("")
-	}
-
-	noTags := util.TagPatternVTT.ReplaceAllString(strings.Join(lines[2:], "\n"), "")
+	noTags := util.TagPattern.ReplaceAllString(content, "")
 
 	// Revert coded HTML items
 	noEntities := html.UnescapeString(noTags)
